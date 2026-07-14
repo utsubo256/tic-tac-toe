@@ -6,14 +6,24 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "prettier --check . && eslint ."
   },
   "dependencies": {
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "react-scripts": "^5.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "prettier"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
